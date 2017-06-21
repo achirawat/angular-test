@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card-header card-primary">
+    <div class="card-header card-inverse card-primary">
         {{pageTitle}}
     </div>
     <div class="card-block">
@@ -48,7 +48,7 @@
                         <td>{{ product.releaseDate }}</td>
                         <td>{{ product.price | currency:'USD':true:'1.2-2' }}</td>
                         <td>
-                            <ai-star></ai-star>
+                            <ai-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></ai-star>
                         </td>
                     </tr>
                 </tbody>

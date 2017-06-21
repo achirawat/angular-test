@@ -1,16 +1,5 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: './app.component.html',
-//   styleUrls: ['./app.component.css']
-// })
-// export class AppComponent {
-//   title = 'app';
-// }
-
-
 import { Component } from '@angular/core';
+import { ProductService } from '../products/product.service';
 
 @Component({
   selector: 'pm-app',
@@ -18,7 +7,8 @@ import { Component } from '@angular/core';
   <div><h1>{{pageTitle}}</h1>
     <pm-products></pm-products>
   </div>
-  `
+  `,
+  providers: [ ProductService ]
 })
 
 export class AppComponent {
