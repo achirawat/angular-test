@@ -4,7 +4,7 @@ import { ActivatedRouteSnapshot, CanActivate, Router } from '@angular/router';
 @Injectable()
 export class ProductDetailGuard implements CanActivate {
 
-    constructor(private router: Router) {
+    constructor(private _router: Router) {
         
     }
 
@@ -13,7 +13,7 @@ export class ProductDetailGuard implements CanActivate {
         if (isNaN(id) || id < 1) {
             alert('Invalid product Id');
             // start a new navigation to redirect to list page
-            this.router.navigate(['/products']);
+            this._router.navigate(['/products']);
             // abort current navigation
             return false;
         };
